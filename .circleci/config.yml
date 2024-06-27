@@ -26,14 +26,14 @@ jobs:
             docker build -t reverseproxy ./udagram-reverseproxy
 
             echo "begin tagging"
-            docker tag udagram-api-feed quocpq/udagram-api-feed:1.0.0
-            docker tag udagram-api-user quocpq/udagram-api-user:1.0.0
-            docker tag udagram-frontend quocpq/udagram-frontend:1.0.0
-            docker tag reverseproxy quocpq/reverseproxy:1.0.0
+            docker tag udagram-api-feed quocpq/udagram-api-feed
+            docker tag udagram-api-user quocpq/udagram-api-user
+            docker tag udagram-frontend quocpq/udagram-frontend
+            docker tag reverseproxy quocpq/reverseproxy
 
             echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
 
-            docker push quocpq/udagram-api-feed:1.0.0
-            docker push quocpq/udagram-api-user:1.0.0
-            docker push quocpq/udagram-frontend:1.0.0
-            docker push quocpq/reverseproxy:1.0.0
+            docker push quocpq/udagram-api-feed
+            docker push quocpq/udagram-api-user
+            docker push quocpq/udagram-frontend
+            docker push quocpq/reverseproxy
