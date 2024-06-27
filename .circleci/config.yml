@@ -33,7 +33,7 @@ jobs:
 
             echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
 
-            docker push quocpq/quocpq/udagram-api-feed:1.0.0
-            docker push quocpq/quocpq/udagram-api-user:1.0.0
-            docker push quocpq/quocpq/udagram-frontend:1.0.0
-            docker push quocpq/quocpq/reverseproxy:1.0.0
+            docker push quocpq/udagram-api-feed:1.0.0
+            docker push quocpq/udagram-api-user:1.0.0
+            docker push quocpq/udagram-frontend:1.0.0
+            docker push quocpq/reverseproxy:1.0.0
